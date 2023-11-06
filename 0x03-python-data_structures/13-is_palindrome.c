@@ -1,40 +1,37 @@
 #include "lists.h"
 
 /**
- * reverse_list - a function to reverse a linked
- * list in place
+ * reverse_listint - reverses a linked list
+ * @head: pointer to the first node in the list
  *
- * @head: pointer to the first element in the list
- *
+ * Return: pointer to the first node in the new list
  */
-
-void reverse_list(listint_t **head)
+void reverse_listint(listint_t **head)
 {
-	listint_t *current_head = *head;
-	listint_t *next_node = NULL;
-	listint_t *previous_node = NULL;
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
 
-	while (current_head)
+	while (current)
 	{
-		next_node = current_head->next;
-		current_head->next = previous_node;
-
-		previous_node = current_head;
-		current_head = next_node;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
 	}
+
+	*head = prev;
 }
 
 /**
- * is_palindrome - a function that checks if a
- * linked list is a palindrome
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
  *
- * @head: a pointer to the first element in the list
- *
- * Return: 1 if the list is a palindrome or 0 if not.
+ * Return: 1 if it is, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *current_head = *head, *rev = NULL;
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
@@ -44,31 +41,31 @@ int is_palindrome(listint_t **head)
 		fast = fast->next->next;
 		if (!fast)
 		{
-			rev = slow->next;
+			dup = slow->next;
 			break;
 		}
-
 		if (!fast->next)
 		{
-			rev = slow->next->next;
+			dup = slow->next->next;
 			break;
 		}
-
 		slow = slow->next;
 	}
-	reverse_list(&rev);
-	while (rev && current_head)
+
+	reverse_listint(&dup);
+
+	while (dup && temp)
 	{
-		if (rev->n == current_head->n)
+		if (temp->n == dup->n)
 		{
-			rev = rev->next;
-			current_head = current_head->next;
+			dup = dup->next;
+			temp = temp->next;
 		}
 		else
 			return (0);
 	}
 
-	if (!rev)
+	if (!dup)
 		return (1);
 
 	return (0);
