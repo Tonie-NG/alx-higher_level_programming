@@ -7,11 +7,11 @@ class Rectangle:
     """Represents a reactangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize properties of a new rectangle
+        """Initialize properties of a new rectangle.
 
         Args:
-            width (int): the width of the Rectangle
-            height (int): the height of the rectangle
+            width (int): the width of the rectangle.
+            height (int): the height of the rectangle.
         """
         self.width = width
         self.height = height
