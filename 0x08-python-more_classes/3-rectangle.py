@@ -52,13 +52,19 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-         """Returns a printable rectangular perimeter."""
-         if self.__width == 0 or self.__height == 0:
-             return ("")
+        """Return the printable representation of the Rectangle.
 
-         rect_str = []
-         for i in range(self.__height):
-             [rect_str.append('#') for j in range(self.__width)]
-             if i != self.__height - 1:
-                 rect_str.append("\n")
-         return ("".join(rect_str))
+        Represents the rectangle with the # character.
+
+        Returns:
+            A string representation of the rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rectangle= []
+        for i in range(self.__height):
+            [rectangle.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
