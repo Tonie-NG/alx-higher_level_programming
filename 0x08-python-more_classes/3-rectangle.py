@@ -55,6 +55,7 @@ class Rectangle:
          """Returns a printable rectangular perimeter."""
          if self.__width == 0 or self.__height == 0:
              return ("")
+
          rect_str = []
          for i in range(self.__height):
              [rect_str.append('#') for j in range(self.__width)]
