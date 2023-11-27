@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """Represents a reactangle."""
 
     def __init__(self, width=0, height=0):
         """Initialize properties of a new rectangle.
@@ -40,3 +40,13 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Caculates the area of thed rectangle."""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Caculates the perimeter of the Rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
