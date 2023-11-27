@@ -51,13 +51,13 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-     def __str__(self):
+    def __str__(self):
          """Returns a printable rectangular perimeter."""
          if self.__width == 0 or self.__height == 0:
              return ("")
          rect_str = []
          for i in range(self.__height):
-             [rect_str.('#') for j in range(self.__width)]
+             [rect_str.append('#') for j in range(self.__width)]
              if i != self.__height - 1:
                  rect_str.append("\n")
          return ("".join(rect_str))
