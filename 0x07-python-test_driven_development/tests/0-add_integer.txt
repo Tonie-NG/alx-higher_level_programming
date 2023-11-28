@@ -5,6 +5,7 @@ The test file ``0-add_integer.py`` module
 This module defines a function that adds two valid integers
 Prototype: ``add_integer(a, b=98)``.
 
+=====
 Usage
 =====
 
@@ -53,9 +54,8 @@ The second argument is optional - by default, it is 98.
     >>> add_integer(3)
     101
 
-============================================================
-Non-Numbers (Numbers that are either not floats or integers)
-============================================================
+Non-Numbers
+===========
 ```add_integer(...)``` expects the arguments to be either integer or floats
 If either argument isn't a TypeError is raised:
 

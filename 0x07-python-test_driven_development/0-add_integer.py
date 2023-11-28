@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Defines a function that adds two numbers."""
+"""Defines a function that adds two numbers"""
 
 def add_integer(a, b=98):
-	"""Return the sum of its arguments.
+	"""Return teh sum of its argumnents
 
-	Floats are typecasted to integers before addition.
+	Floats are typecasted to integers before addition
 
 	Raises:
-		TypeError: If either of its arguments is not a valid integer or float.
+		TypeError: If either of its argumnents is not a valid integer or float
 	"""
 
 	if (not isinstance(a, int) and not isinstance(a, float)):
