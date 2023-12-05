@@ -9,8 +9,6 @@ if __name__ == "__main__":
 
 
     item = load_from_json_file("add_item.json")
-    if not item:
-        item = []
     for arg in sys.argv[1:]:
         item.append(arg)
     save_to_json_file(item, "add_item.json")
