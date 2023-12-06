@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-"""Function that from standard input.
-Task 101.
+"""Function that reads from standard input."""
 
-After 10 lines or a keyboard interruption (CTRL + C),
-it prints:
-    - File size up to that point.
-    - Count of read status codes up to that point.
-"""
 
 def print_stats(size, status_codes):
 	"""Prints statistics/metrics.
