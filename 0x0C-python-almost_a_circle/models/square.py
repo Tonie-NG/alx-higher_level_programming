@@ -5,6 +5,8 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """A class that represents a square."""
+
     def __init__(self, size, x=0, y=0, id=None):
         """constructor to be called on instantiation.
 
@@ -76,3 +78,4 @@ class Square(Rectangle):
         """Return the string representation of the Rectangle."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                  self.y, self.width)
+
