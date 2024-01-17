@@ -11,4 +11,4 @@ WHERE title not in (
 	ON tv_show_genres.genre_id = tv_genres.i
 )
 GROUP BY title
-ORDER BY title ASC
+ORDER BY title ASC;
