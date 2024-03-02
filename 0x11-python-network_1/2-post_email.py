@@ -7,8 +7,8 @@ if __name__ == "__main__":
     from urllib import parse, request
 
     url = sys.argv[1]
-    value = {"email": sys.argv[2]}
-    data = parse.urlencode(value).encode("ascii")
+    params = {"email": sys.argv[2]}
+    data = parse.urlencode(params).encode("ascii")
     req = request.Request(url, data)
     with request.urlopen(req) as res:
         print(res.read().decode("utf-8"))
