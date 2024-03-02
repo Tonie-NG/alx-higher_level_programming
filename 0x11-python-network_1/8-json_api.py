@@ -10,7 +10,7 @@ if __name__ == "__main__":
         letter = ""
     else:
         letter = sys.argv[1]
-    url = 'http://0.0.0.0:i5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
     params = {"q": letter}
     req = requests.post(url, data=params)
 
