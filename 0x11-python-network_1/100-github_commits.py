@@ -15,8 +15,10 @@ if __name__ == "__main__":
         )
     req = requests.get(giturl)
     jsonlist = req.json()
-
-    for i in range(10):
-        print("{}: {}".format(
-            jsonlist[i].get("sha"),
-            jsonlist[i].get("commit").get("author").get("name")))
+    try:
+        for i in range(10):
+            print("{}: {}".format(
+                jsonlist[i].get("sha"),
+                jsonlist[i].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
