@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# sends a request to the URL and displays the body of the response
+""" sends a request to the URL and displays the body of the response"""
 
 
 if __name__ == "__main__":
